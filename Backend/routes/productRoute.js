@@ -1,6 +1,12 @@
 const express = require('express')
 const upload = require('../libs/storage')
-const { addProduct, getProducts, getProduct,updateProduct,deleteProduct } = require('../controllers/productController')
+const { 
+    addProduct, 
+    getProducts, 
+    getProduct,
+    updateProduct,
+    deleteProduct
+ } = require('../controllers/productController')
 const api = express.Router()
 
 //api.post('/torre',torreController.addProduct)
