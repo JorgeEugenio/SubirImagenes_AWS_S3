@@ -9,7 +9,7 @@ const {
 
 const api = express.Router()
 
-    api.post('/imagen/', upload.array('imgUrl',12), addImagen)
+    api.post('/imagen/', upload.single('imgUrl'), addImagen)
     api.get('/imagen', getImagenes)
     api.put('/imagen/:id', updateImagen)
     api.delete('/imagen/:id',deleteImagen)

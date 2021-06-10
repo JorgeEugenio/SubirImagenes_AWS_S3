@@ -3,9 +3,18 @@ const { appConfig} = require('../config')
 const Schema = mongoose.Schema
 
 const imagenSchema = Schema({
-    idUser: String,
-    nombreCarpeta: String,
-    cantidadImagenes: Number,
+    idUser: {
+        type: String,
+        default: ''
+    },
+    nombreCarpeta: {
+        type: String,
+        default: ''
+    },
+    cantidadImagenes: {
+        type: Number,
+        default: 0
+    },
     imgUrl: String,
     descripcion: {
         type: String,

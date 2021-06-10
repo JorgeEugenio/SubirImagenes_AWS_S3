@@ -17,13 +17,10 @@ async function addImagen(req, res){
             cantidadImagenes,
             descripcion
         })
-         fs.mkdir(`./storage/img/${imagen._id}`, { recursive: true }, (err) => {
-            if (err) throw err;
-          });
           if(req.file){
+              console.log('pase por if');
               const { filename } = req.file
               imagen.setImgUrl(filename)
-              console.log('pase un file');
           }
         await imagen.save()
         res.status(201).send(imagen._id)
@@ -61,6 +58,10 @@ async function getImagenes(req, res){
 
 async function updateImagen(req, res){
     try {
+        fs.mkdir(`./storage/img/${imagen._id}`, { recursive: true }, (err) => {
+            if (err) throw err;
+          });
+
         await Imagen.findByIdAndUpdate(req.body)
         res.status(200).send({ status: 'Imagen actualizado'})
     } catch (e) {
