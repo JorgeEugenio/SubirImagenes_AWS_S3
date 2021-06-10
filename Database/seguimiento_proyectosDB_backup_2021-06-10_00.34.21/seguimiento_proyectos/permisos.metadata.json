@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"seguimiento_proyectos.permisos"}],"uuid":"3e345b44c8a446529ed2bcf11e4606b0"}
